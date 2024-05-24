@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/861ce09321.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/Edit-profile-1.css" %}">
+</head>
+<body>
+    <header>
+        <h1><img src="{% static "asset/icon.png" %}" alt=""></h1>
+        <p>Super Admin</p>
+        <nav>
+            <ul>
+                <li></li>
+                <li><a href="{% url "dashboard" %}"><i class='bx bx-home-alt'></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-arrow-down"></i>  App Download Status</a></li>
+                <li><a href="{% url "Mentoreship" %}"><i class='bx bxs-graduation' ></i> Mentorship</a></li>
+                <li><a href="{% url "internship" %}"><i class="fa-solid fa-desktop"></i> Internship</a></li>
+                <li><a href="{% url "fresher" %}"><i class="fa-solid fa-laptop-code"></i> Fresher</a></li>
+                <li><a href="#"><i class='bx bx-briefcase' ></i> Experience</a></li>
+                <li><a href="{% url "corporate_training" %}"><i class="fa-solid fa-folder-tree"></i> Corporate Training</a></li>
+                <li><a href="#"><i class="fa-regular fa-file"></i> Courses</a></li>
+                <li><a href="#"><i class='bx bxs-report'></i> Project Report</a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i> Admin Settings</a></li>
+                <li><a href="{% url "superuser_logout" %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- ---------backbuuton------------ -->
+
+    <div class="arrow">
+        <div class="back-arr">
+            <img src="../static/asset/back arrow.png" alt="">
+        </div>
+    </div>
+
+<!-- ----------------inputform------------>
+
+    <div class="inputform">
+        <div class="profile-details">
+            <h3>Edit Profile</h3>
+            <div class="inp-details">
+                <div class="inp-data">
+                    <div class="inp-form">
+                        <p>Full Name :</p><br>
+                        <input type="text" value="Rishu">
+                    </div><br><br>
+                    <div class="inp-form">
+                        <p>Email :</p><br>
+                        <input type="text" value="hirmi@gmail.com">
+                    </div><br><br>
+                    <div class="inp-form-1">
+                        <p>Phone Number :</p><br>
+                        <input type="text" value="81202*****">
+                    </div><br><br>
+                    <div class="inp-form">
+                        <p>Father's Name :</p><br>
+                        <input type="text">
+                    </div><br><br>
+                    <div class="inp-form">
+                        <p>College Name :</p><br>
+                        <input type="text">
+                    </div><br><br>
+                    <div class="inp-form-1">
+                        <p>Branch :</p><br>
+                        <input type="text">
+                    </div><br><br>
+                    <div class="inp-form">
+                        <p>College ID/ UAN No :</p><br>
+                        <input type="text" value="811it51*****">
+                    </div><br><br>
+                    <div class="inp-form-6">
+                        <p>Communication Rate :</p><br>
+                        <div>
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <p1>4</p1>
+                            <p1>5</p1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inp-data1">
+                    <div class="inp-form-2">
+                        <p>Date of Birth :</p><br>
+                        <input type="date" >
+                    </div><br><br>
+                    <div class="inp-form-2">
+                        <p>Gender :</p><br>
+                        <input type="text" value="Male">
+                    </div><br><br>
+                    <div class="inp-form">
+                        <p>WhatsApp Number :</p><br>
+                        <input type="text">
+                    </div><br><br>
+                    <div class="inp-form-3">
+                        <p>Birth Place :</p><br>
+                        <div>
+                            <input type="text" >
+                            <input type="text" >
+                        </div>
+                    </div><br><br>
+                    <div class="inp-form-4">
+                        <p>College State :</p><br>
+                        <input type="text" value="E.g. Madhya Pradesh">
+                    </div><br><br>
+                    <div class="inp-form-5">
+                        <p>Passing Year :</p><br>
+                        <input type="text" value="2024">
+                    </div><br><br>
+                    <div class="inp-form-5">
+                        <p>Interested Domain :</p><br>
+                        <input type="text" >
+                    </div><br><br>
+                    <div class="inp-form-5">
+                        <p>Key Skills :</p><br>
+                        <input type="text" >
+                    </div>
+                </div>
+            </div><br><br>
+            <div class="exp">
+                <div class="exp-1">
+                    <p>Describe Your Experience :</p><br><br>
+                    <input type="text" placeholder=""><br><br><br>
+                </div>
+                <div class="exp-1">
+                    <p>Company Review :</p><br><br>
+                    <input type="text"><br><br><br>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="submit">
+                <div class="sub-btn">
+                    <button>Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,380 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 100%;
+}
+header {
+    background: linear-gradient(30deg, red, rgb(0, 0, 0));
+    color: white;
+    position: fixed;
+    z-index: 2;
+    width: 200px;
+    height: 100%;
+    padding: 10px 20px;
+}
+
+header h1{
+    font-size: 50px;
+}
+header p{
+    font-size: 12px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul {
+    list-style-type: none;
+}
+header nav ul li:first-child{
+    background-color: #f2f2f281;
+    height: 10px;
+    border-left: 5px solid white;
+    position: absolute;
+    width: 80%;
+    border-radius: 6px;
+}
+header nav ul li {
+    width: 100%;
+    padding: 10px 0px 20px 20px;
+}
+header i{
+    padding-right: 10px;
+    font-size: 20px;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+.search{
+    padding-bottom: 50px;
+}
+.sec-inp{
+    background-color: #f2f2f2;
+    width: 100%;
+}
+.inp-bg{
+    padding-left: 100px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inp-bg i{
+    font-size: 25px;
+    color: red;
+    position: absolute;
+    left: 34%;
+}
+.inp-bg img{
+    position: absolute;
+    right: 29%;
+}
+.inp-bg input::placeholder{
+    padding-left: 50px;
+    font-size: 25px;
+}
+.inp-bg input{
+    border-radius: 20px;
+    box-shadow: 1px 0.5px 5px 0.5px;
+    padding: 10px;
+    height: 40px;
+    width: 600px;
+    border: none;
+    outline: none;
+}
+.sec-inp img{
+    width: 70px;
+}   
+.list1{
+    background-color: #f2f2f2;
+    height: 100vh;
+    width: 100%;
+}
+.list1 .list-type{
+    margin-left: 16.3%;
+    width: fit-content;
+    background-color: white;
+    border-radius: 10px;
+}
+th{
+    font-size: 12px;
+}
+table{
+    width: 100%;
+    height: 100%;
+}
+table{
+    font-size: 5px;
+}
+ td{
+    padding: 20px 15px;
+    font-size: 12px;
+}
+table{
+    padding: 10px;
+}
+th:nth-child(12){
+    text-align: center;
+}
+th:last-child{
+    text-align: center;
+}
+th{
+    padding: 20px 10px;
+    text-align: start;
+}
+table, th{
+    text-align: start;
+    border-spacing: 0;
+    border-bottom: 2px solid gray;
+}
+table, td{
+    font-weight: 600;
+    text-align: start;
+    border-bottom: 2px solid lightgray;
+}
+table, tbody{
+    text-align: center;
+}
+span{
+    display: inline-block;
+    transform: rotate(90deg);
+}
+table{
+    border: none;
+}
+.ver1{
+    border-radius: 20px;
+    padding: 5px 20px;
+    color: green;
+    border: 1px solid green;
+}
+.ver2{
+    border-radius: 20px;
+    padding: 5px 20px;
+    color: rgb(255, 166, 0);
+    border: 1px solid rgb(255, 166, 0);
+}
+.ver3{
+    border-radius: 15px;
+    padding: 4px 10px;
+    color: red;
+    border: 1px solid red;
+}
+.view{
+    background: linear-gradient(30deg, red, rgb(0, 0, 0));
+    color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+@media only screen and (max-width: 600px){
+    .search{
+        background-color: #f2f2f2;
+        height: fit-content;
+        display: inline-block;
+        width: 100%;
+        padding-left: 10%;
+        padding-bottom: 50px;
+    }
+    .inp-bg{
+        padding-left: 400px;
+        padding-top: 20px;
+        width: 120%;
+        display: flex;
+
+    }
+    .sec-inp{
+        width: 100%;
+    }
+    .inp-bg i{
+        font-size: 25px;
+        color: red;
+        position: absolute;
+        left: 98%;
+    }
+    .inp-bg img{
+        position: absolute;
+        right: -100%;
+    }
+    .inp-bg input::placeholder{
+        padding-left: 50px;
+        font-size: 25px;
+    }
+    .inp-bg input{
+        border-radius: 20px;
+        box-shadow: 1px 0.5px 5px 0.5px;
+        padding: 10px;
+        height: 40px;
+        width: 600px;
+        border: none;
+        outline: none;
+    }
+    .sec-inp img{
+        width: 70px;
+    }
+    .list1 .list-type{
+        margin-left: 50%;
+        margin-right: 50%;
+        width: fit-content;
+        height: 160vh;
+        background-color: white;
+        border-radius: 10px;
+    }
+    th{
+        font-size: 25px;
+    }
+    table{
+        width: 100%;
+        height: 100%;
+    }
+    table{
+        font-size: 5px;
+    }
+     td{
+        padding: 20px 15px;
+        font-size: 12px;
+    }
+    table{
+        padding: 10px;
+    }
+    th:nth-child(12){
+        text-align: center;
+    }
+    th:last-child{
+        text-align: center;
+    }
+    th{
+        padding: 20px 10px;
+        text-align: start;
+    }
+    table, th{
+        text-align: start;
+        border-spacing: 0;
+        border-bottom: 2px solid gray;
+    }
+    table, td{
+        text-align: start;
+        border-bottom: 2px solid lightgray;
+    }
+    table, tbody{
+        text-align: center;
+    }
+    span{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+    table{
+        border: none;
+    }
+    .ver1{
+        border-radius: 20px;
+        padding: 5px 20px;
+        color: green;
+        border: 1px solid green;
+    }
+    .ver2{
+        border-radius: 20px;
+        padding: 5px 20px;
+        color: rgb(255, 166, 0);
+        border: 1px solid rgb(255, 166, 0);
+    }
+    .ver3{
+        border-radius: 15px;
+        padding: 4px 10px;
+        color: red;
+        border: 1px solid red;
+    }
+    .view{
+        background: linear-gradient(30deg, red, rgb(0, 0, 0));
+        color: white;
+        border-radius: 20px;
+        padding: 5px 15px;
+    }
+} 
+
+
+
+
+
+
+
+/* code for paginations */
+
+
+
+
+.pagination {
+    text-align: center; /* Center-align the pagination controls */
+    margin-top: 20px; /* Add some space above the pagination */
+    font-family: Arial, sans-serif; /* Use a clean, readable font */
+}
+
+.pagination a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 8px 16px; /* Add padding for clickable area */
+    border: 1px solid #ddd; /* Add border to links */
+    margin: 0 4px; /* Add space between links */
+    border-radius: 4px; /* Rounded corners for links */
+    display: inline-block; /* Make links appear inline */
+}
+
+.pagination a:hover {
+    background-color: #ddd; /* Background color on hover */
+    border-color: #007bff; /* Change border color on hover */
+}
+
+.pagination a:active {
+    background-color: #0056b3; /* Background color when clicked */
+    color: white; /* Text color when clicked */
+}
+
+
+
+.pagination .current b {
+    transform: rotate(90deg); /* Rotate the text 90 degrees clockwise */
+    display: inline-block; /* Make the text appear inline */
+    padding: 0 8px; /* Add padding to the text */
+    font-weight: normal; /* Reset the font weight */
+    transform-origin: 50% 50%; /* Set the rotation origin to the center */
+    display: inline-block; /* Make the current page indicator appear inline */
+    transform: rotate(-90deg); /* Rotate the text 90 degrees counter-clockwise */
+}
+.pagination .current:hover {
+    background-color: #ddd; /* Background color on hover */
+    border-color: #007bff; /* Change border color on hover */
+}
+
+
+
+
+.table th input[type="text"] {
+    width: 90%;
+    padding: 5px;
+    margin: 2px 0;
+    box-sizing: border-box;
+}
+
+.table th button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.table th button:hover {
+    background-color: #0056b3;
+}
+

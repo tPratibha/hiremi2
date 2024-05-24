@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/861ce09321.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/profile-1.css" %}">
+</head>
+<body>
+    <header>
+        <h1><img src="{% static "asset/icon.png" %}" alt=""></h1>
+        <p>Super Admin</p>
+        <nav>
+            <ul>
+                <li></li>
+                <li><a href="{% url "dashboard" %}"><i class='bx bx-home-alt'></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-arrow-down"></i>  App Download Status</a></li>
+                <li><a href="{% url "Mentoreship" %}"><i class='bx bxs-graduation' ></i> Mentorship</a></li>
+                <li><a href="{% url "internship" %}"><i class="fa-solid fa-desktop"></i> Internship</a></li>
+                <li><a href="{% url "fresher" %}"><i class="fa-solid fa-laptop-code"></i> Fresher</a></li>
+                <li><a href="#"><i class='bx bx-briefcase' ></i> Experience</a></li>
+                <li><a href="{% url "corporate_training" %}"><i class="fa-solid fa-folder-tree"></i> Corporate Training</a></li>
+                <li><a href="#"><i class="fa-regular fa-file"></i> Courses</a></li>
+                <li><a href="#"><i class='bx bxs-report'></i> Project Report</a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i> Admin Settings</a></li>
+                <li><a href="{% url "superuser_logout" %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="arrow">
+        <div class="back-arr">
+            <img src="../static/asset/back arrow.png" alt="">
+        </div>
+    </div>
+
+    <div class="profile">
+        <div class="pf">
+            <div class="pf-1">
+                <h2>Profile</h2>
+                <div class="nam">
+                    <h3>Name :</h3> <p1>{{data.full_name}}</p1>
+                </div>
+                <div>
+                    <h3>Date of Birth :</h3> <p1>{{data.date_of_birth}}</p1>
+                </div>
+                <div>
+                    <h3>Gender :</h3> <p1>{{data.gender}}</p1>
+                </div>
+                <div>
+                    <h3>Applied Date :</h3> <p1>{{data.time_end}}</p1>
+                </div>
+                <div class="status">
+                    <h3>status :</h3> <p class="ver1">{{data.verified}}</p>
+                </div>
+            </div>
+            <div class="pf-2">
+                <img src="../static/asset/profil-pic.png" alt="">
+                <h3>UTR No.</h3>
+                <p>3208092243</p>
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="pf-1">
+                <h2>Contact</h2>
+                <div>
+                    <h3>E-mail :</h3> <p1>{{data.email}}</p1>
+                </div>
+                <div>
+                    <h3>Phone Number :</h3> <p1>{{data.phone_number}}</p1>
+                </div>
+                <div>
+                    <h3>WhatsApp Number:</h3> <p1>{{data.whatsapp_number}}</p1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-1">
+        <div class="info">
+            <div class="pf-1">
+                <h2>Personal Information</h2>
+                <div class="nam">
+                    <h3>Father's Name :</h3> <p1>{{data.father_name}}</p1>
+                </div>
+                <div>
+                    <h3>Birth Place :</h3> <p1>E.g. Madhya Pradesh Bhopal</p1>
+                </div>
+            </div>
+        </div>
+        <div class="pf">
+            <div class="pf-1">
+                <h2>College Information</h2>
+                <div class="pf1-sub">
+                    <div>
+                        <div>
+                            <h3>College Name:</h3> <p1>{{data.college_name}}</p1>
+                        </div>
+                        <div>
+                            <h3>College State :</h3> <p1>{{data.college_state}}</p1>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3>Branch:</h3> <p1>{{data.branch_name}}</p1>
+                        </div>
+                        <div>
+                            <h3>Passing Year :</h3> <p1>{{data.passing_year}}</p1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-2">
+        <div class="pf">
+            <div class="pf-1">
+                <h2>Verify Information</h2>
+                <div>
+                    <h3>College ID/UAN No :</h3> <p>0111it215***</p>
+                </div>
+                <div>
+                    <h3>Describe your Experience :</h3> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Autem voluptas nobis nisi ratione tenetur animi nostrum
+                         veritatis dolorum molestias modi, explicabo fuga ab quod ipsum blanditiis et? Commodi, placeat reiciendis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="pf-1">
+                <h2>Verify Details</h2>
+                <div>
+                    <h3>Interested Domain :</h3> <p>E.g. Software Developer</p>
+                </div>
+                <div>
+                    <h3>Key Skills :</h3> <p>E.g. UI/UX</p>
+                </div>
+                <div>
+                    <h3>Communication Rate</h3> 
+                    <div class="rate">
+                        <p1>1</p1>
+                        <p1>2</p1>
+                        <p1>3</p1>
+                        <p>4</p>
+                        <p>5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-3">
+        <div class="pf">
+            <div class="pf-1">
+                <h2>Company Review</h2>
+                <div>
+                    <h3>Experience Review :</h3> 
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus aliquam modi odit, error ex, 
+                        neque dolor culpa minima ipsa rerum, deserunt repellendus exercitationem. 
+                        Debitis harum velit vel ad animi reiciendis!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat ducimus iure magnam, blanditiis
+                         dolores nemo quod numquam ut doloremque repellat, ipsam asperiores modi dolore iste assumenda laboriosam. Facilis, nemo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

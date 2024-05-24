@@ -1,0 +1,466 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: linear-gradient(30deg, red, rgb(0, 0, 0));
+    color: white;
+    position: fixed;
+    z-index: 1;
+    width: 200px;
+    height: 100%;
+    padding: 10px 20px;
+}
+
+header h1{
+    text-align: center;
+    font-size: 50px;
+}
+header p{
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul {
+    list-style-type: none;
+}
+header nav ul li:first-child{
+    height: 10px;
+    position: absolute;
+    width: 85%;
+    border-radius: 6px;
+}
+header nav ul li {
+    width: 100%;
+    padding: 10px 0px 20px 20px;
+}
+header i{
+    padding-right: 10px;
+    font-size: 20px;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.arrow{
+    background-color: #f2f2f2;
+    padding: 2% 2% 2% 25%;
+}
+.arrow .back-arr img{
+    border-radius: 100%;
+    width: 50px;
+}
+/* --------------------------- */
+
+.profile{
+    background-color: #f2f2f2;
+    padding-left: 25%;
+    padding-bottom: 50px;
+}
+.profile .pf{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    column-gap: 50px;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+.profile .pf .pf-1 h2{
+    width: 100%;
+}
+.profile .pf .pf-1 div h3{
+    font-size: 15px;
+}
+.profile .pf .pf-1 div{
+    width: 100%;
+    padding: 10px 0px
+}
+.profile .pf .pf-1 div{
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+.profile .pf-1 h2{
+    width: 100%;
+    color: red;
+}
+.pf-1 div p1{
+    color: gray;
+}
+.profile .pf .pf-1 .nam{
+    padding-top: 30px;
+}
+.profile .pf2{
+    padding: 0px 50px;
+    width: 100%;
+}
+.pf-2 img{
+    border-radius: 50%;
+    width: 150px;
+}
+.pf-2 h3{
+    padding-top: 20px;
+}
+.pf-2 p{
+    padding-top: 10px;
+    color: gray;
+}
+.pf-2 h3, .pf-2 p{
+    width: 100%;
+    text-align: center;
+}
+.status .ver1{
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 10px;
+    color: orange;
+    border: 1px solid orange;
+}
+.status .ver2{
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 10px;
+    color: white;
+    background: linear-gradient(200deg,  green , rgba(0, 0, 0, 0.845));
+}
+.status .ver2 a{
+    color: white;
+    text-decoration: none;
+}
+.status .ver3{
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 10px;
+    border: none;
+    color: white;
+    background: linear-gradient(200deg,  red , rgba(0, 0, 0, 0.845));
+}
+.status .ver3 a{
+    color: white;
+    text-decoration: none; 
+}
+.profile{
+    display: flex;
+    column-gap: 100px;
+}
+.info{
+    background-color: white;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+}
+.info .pf-1{
+    padding: 20px 30px;
+}
+.profilr .info .pf-1 div{
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+}
+.info .pf-1 div h3{
+    width: 100%;
+    font-size: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* ----------------------- */
+
+.profile-1{
+    background-color: #f2f2f2;
+    padding-left: 25%;
+    padding-bottom: 50px;
+}
+.profile-1 .pf{
+    column-gap: 100px;
+    background-color: white;
+    width: 470px;
+    height: 300px;
+    border-radius: 20px;
+}
+.profile-1 .pf .pf-1{
+    padding: 20px 30px;
+}
+.profile-1 .pf .pf-1 .pf1-sub{
+    display: flex;
+    align-items: baseline;
+    column-gap: 100px;
+    padding: 0px 0px;
+}
+.profile-1 .pf .pf-1 .pf1-sub div{
+    width: 100%;
+    padding: 10px 0px;
+}
+.profile-1 .pf .pf-1 .pf1-sub div div h3{
+    width: 100%;
+    padding: 15px 0px;
+}
+.profile-1 .pf-1 h2{
+    color: red;
+}
+.profile-1 .pf-1 div p1{
+    color: gray;
+}
+.profile-1 .pf .pf-1 .nam{
+    padding-top: 20px;
+}
+.pf-2 h3{
+    padding-top: 20px;
+}
+.pf-2 p{
+    padding-top: 10px;
+    color: gray;
+}
+.pf-2 h3, .pf-2 p{
+    text-align: center;
+}
+.profile-1{
+    display: flex;
+    column-gap: 100px;
+}
+.profile-1 .info{
+    background-color: white;
+    border-radius: 20px;
+    width: 400px;
+    height: 300px;
+}
+.profile-1 .info .pf-1{
+    padding: 20px 30px;
+}
+.profile-1 .info .pf-1 div{
+    width: 100%;
+    padding-top: 20px;
+}
+.profile-1 .info .pf-1 div h3{
+    padding-bottom: 10px;
+}
+
+/* ---------------------------- */
+
+.profile-2{
+    background-color: #f2f2f2;
+    padding-left: 25%;
+    padding-bottom: 50px;
+}
+.profile-2 .pf{
+    column-gap: 100px;
+    background-color: white;
+    width: 570px;
+    height: 300px;
+    border-radius: 20px;
+}
+.profile-2 .pf .pf-1{
+    padding: 20px 30px;
+}
+.profile-2 .pf .pf-1 div{
+    padding-top: 25px;
+}
+.profile-2 .pf .pf-1 div p{
+    color: gray;
+    text-align: justify;
+    padding-top: 10px;
+}
+.profile-2 .pf-1 h2{
+    color: red;
+}
+.profile-2 .pf-1 div p1{
+    color: gray;
+}
+.profile-2 .pf .pf-1 .nam{
+    padding-top: 20px;
+}
+.profile-2 .pf-2 h3{
+    padding-top: 20px;
+}
+.profile-2{
+    display: flex;
+    column-gap: 100px;
+}
+.profile-1 .info{
+    background-color: white;
+    border-radius: 20px;
+    width: 400px;
+    height: 300px;
+}
+.profile-2 .info .pf-1 div p{
+    color: gray;
+}
+.profile-2 .info .pf-1{
+    padding: 20px 30px;
+}
+.profile-2 .info .pf-1 div{
+    width: 100%;
+    padding-top: 10px;
+}
+.profile-2 .info .pf-1 div h3{
+    padding-bottom: 10px;
+}
+.profile-2 .info .pf-1 .rate{
+    display: flex;
+    color: white;
+    align-items: center;
+    column-gap: 20px;
+}
+.profile-2 .info .pf-1 .rate p1{
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    padding: 6px 10px;
+    background-color: green;
+}
+.profile-2 .info .pf-1 .rate p{
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    color: white;
+    padding: 6px 10px;
+    background-color: gray;
+}
+
+/* ---------------------------- */
+
+.profile-3{
+    background-color: #f2f2f2;
+    padding-left: 25%;
+    padding-bottom: 50px;
+}
+.profile-3 .pf{
+    background-color: white;
+    width: 970px;
+    height: 100%;
+    border-radius: 20px;
+}
+.profile-3 .pf .pf-1 {
+    padding: 20px 30px;
+}
+.profile-3 .pf .pf-1 div{
+    padding-top: 25px;
+}
+.profile-3 .pf .pf-1 div p{
+    color: gray;
+    text-align: justify;
+    padding-top: 10px;
+}
+.profile-3 .pf-1 h2{
+    color: red;
+}
+.profile-3 .pf-1 div p{
+    color: gray;
+}
+.profile-3 .pf .pf-1{
+    padding-top: 20px;
+}
+.profile-2 .pf-2 h3{
+    padding-top: 20px;
+}
+.profile-2{
+    display: flex;
+    column-gap: 100px;
+}
+
+/* ----------------responsive------------- */
+
+@media only screen and (max-width: 600px){
+    .arrow{
+        width: 100%;
+        padding-left: 50%;
+        background-color: #f2f2f2;
+    }
+    .arrow .back-arr{
+        background-color: #f2f2f2;
+    }
+    .profile{
+        display: block;
+        width: 100%;
+        padding-left: 50%;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .profile .pf{
+        background-color: white;
+        width: 430px;
+        height: 100%;
+        margin-bottom: 40px;
+        border-radius: 20px;
+    }
+    .profile .pf{
+        display: flex;
+        align-items: center;
+        background-color: white;
+        height: 300px;
+        column-gap: 10px;
+        padding: 10px 30px;
+        border-radius: 20px;
+    }
+    .profile-1{
+        width: 100%;
+        display: block;
+        padding-left: 50%;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .profile-1 .pf{
+        background-color: white;
+        width: 450px;
+        height: 100%;
+        border-radius: 20px;
+    }
+    .profile-1 .info .pf-1 h2{
+        width: 100%;
+    }
+    .profile-1 .info{
+        display: flex;
+        align-items: center;
+        background-color: white;
+        width: 320px;
+        height: 300px;
+        column-gap: 20px;
+        padding: 10px 10px;
+        margin-bottom: 40px;
+        border-radius: 20px;
+    }
+    .profile-2{
+        width: 100%;
+        padding-left: 50%;
+        display: block;
+        padding-bottom: 10px;
+    }
+    .profile-2 .pf{
+        background-color: white;
+        width: 450px;
+        height: 100%;
+        margin-bottom: 40px;
+        border-radius: 20px;
+    }
+    .profile-2 .info{
+        background-color: white;
+        width: 350px;
+        height: 100%;
+        margin-bottom: 40px;
+        border-radius: 20px;
+    }
+    .profile-3{
+        width: 100%;
+        display: block;
+        padding-left: 50%;
+        padding-bottom: 40px;
+    }
+    .profile-3 .pf{
+        background-color: white;
+        width: 500px;
+        height: 100%;
+        border-radius: 20px;
+    }
+}

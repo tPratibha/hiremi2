@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/861ce09321.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>State Ranking</title>
+</head>
+<link rel="stylesheet" href="{% static "css/Information.css" %}">
+<body>
+    <header>
+        <h1><img src="{% static "asset/icon.png" %}" alt=""></h1>
+        <p>Super Admin</p>
+        <nav>
+            <ul>
+                <li></li>
+                <li><a href="{% url "dashboard" %}"><i class='bx bx-home-alt'></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-arrow-down"></i>  App Download Status</a></li>
+                <li><a href="{% url "Mentoreship" %}"><i class='bx bxs-graduation' ></i> Mentorship</a></li>
+                <li><a href="{% url "internship" %}"><i class="fa-solid fa-desktop"></i> Internship</a></li>
+                <li><a href="{% url "fresher" %}"><i class="fa-solid fa-laptop-code"></i> Fresher</a></li>
+                <li><a href="#"><i class='bx bx-briefcase' ></i> Experience</a></li>
+                <li><a href="{% url "corporate_training" %}"><i class="fa-solid fa-folder-tree"></i> Corporate Training</a></li>
+                <li><a href="#"><i class="fa-regular fa-file"></i> Courses</a></li>
+                <li><a href="#"><i class='bx bxs-report'></i> Project Report</a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i> Admin Settings</a></li>
+                <li><a href="{% url "superuser_logout" %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- --------------info-------------- -->
+    <div class="information">
+        <div class="info">
+            <div class="infoo">
+                <h4>Account Information</h4>
+                <div class="per-info">
+                    <div class="info-1">
+                        <img src="../static/asset/profil-pic.png" alt="">
+                        <h5>UTR No:</h5>
+                        <p1>6281145457</p1><br><br>
+                        <p>Applied Date: 14-May-2024</p>
+                    </div>
+                    <div class="info-2">
+                        <p>Name :</p>
+                        <p>E-Mail :</p>
+                        <p>Date of Birth :</p>
+                        <p>Gender :</p>
+                        <p>Status :</p> 
+                        <p>Verified</p>
+                    </div>
+                </div>
+            </div><br><br><br>
+
+            <!-- ----------info-2---------------- -->
+
+            <div class="info-3">
+                <div class="infoo-1">
+                    <h4>Personal Information</h4>
+                    <div class="per-info">
+                        <div class="per-info-1">
+                            <p>Father's Name :</p><br>
+                            <input type="text" value="First Name"><br><br><br>
+                            <p>Birth Place :</p><br>
+                            <input type="text" value="State"><br><br><br>
+                            <p>Contact Number :</p><br>
+                            <input type="text" value="Phone No">
+                        </div>
+                        <div class="per-info-2">
+                            <br><br><br>
+                            <input type="text" value="First Name"><br><br>
+                            <br><br><br>
+                            <input type="text" value="State"><br><br><br>
+                            <br><br>
+                            <input type="text" value="Phone No">
+                        </div>
+                    </div>
+                </div>
+            </div><br><br><br>
+
+            <!-- ----------info-3---------------- -->
+
+            <div class="info-4">
+                <div class="infoo-2">
+                    <h4>College Information</h4>
+                    <br><br>
+                    <p>College Name :</p><br>
+                    <input type="text" value="E.g. TIT"><br><br>
+                    <div class="per-info">
+                        <div class="per-info-1">
+                            <p>College State :</p><br>
+                            <input type="text" value="E.g. Bhopal"><br><br><br>
+                            <p>Branch :</p><br>
+                            <input type="text" value="E.g. IT">
+                        </div>
+                        <div class="per-info-2">
+                            <br><br><br>
+                            <input type="text" value="City">
+                            <br><br><br>
+                            <p>Passing Year :</p><br>
+                            <input type="text" value="State"><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

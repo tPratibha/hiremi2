@@ -1,0 +1,197 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 100%;
+}
+header {
+    background: linear-gradient(30deg, red, rgb(0, 0, 0));
+    color: white;
+    position: fixed;
+    z-index: 1;
+    width: 200px;
+    height: 100%;
+    padding: 10px 20px;
+}
+
+header h1{
+    font-size: 50px;
+}
+header p{
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul {
+    list-style-type: none;
+}
+header nav ul li:first-child{
+    background-color: #f2f2f281;
+    height: 10px;
+    border-left: 5px solid white;
+    position: absolute;
+    width: 80%;
+    border-radius: 6px;
+}
+header nav ul li {
+    width: 100%;
+    padding: 10px 0px 20px 20px;
+}
+header i{
+    padding-right: 10px;
+    font-size: 20px;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+/* ---------info----------- */
+
+.information{
+    padding-left: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 4%;
+}
+.information .info{
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+}
+.information .info .infoo h4, .information .info .infoo-1 h4{
+    color: red;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.information .info .per-info .info-1 img{
+    width: 130px;
+    border-radius: 50%;
+}
+.information .info .per-info .info-1 h5{
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+.information .info .per-info .info-1 p1{
+    padding-left: 22px;
+}
+.information .info .per-info .info-1 p{
+    font-size: 13px;
+}
+.information .info .per-info{
+    display: flex;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+.information .info .per-info .info-2 p{
+    padding-top: 18px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.information .info .per-info .info-2 p:nth-child(5){
+    float: left;
+}
+.information .info .per-info .info-2 p:last-child{
+    float: right;
+    border: 1px solid green;
+    border-radius: 10px;
+    color: green;
+    font-size: 10px;
+    padding: 3px 12px;
+    margin-top: 18px;
+    margin-left: 10px;
+}
+
+/* -----------info-2------------ */
+
+.information .info-3 .infoo-1 .per-info .per-info-1 p{
+    font-size: 15px;
+    font-weight: 600;
+}
+.information .info-3 .infoo-1 .per-info .per-info-1{
+    padding-top: 20px;
+}
+.information .info-3 .infoo-1 .per-info .per-info-1 input, .information .info-3 .infoo-1 .per-info .per-info-2 input{
+    border: none;
+    background-color: transparent;
+    color: gray;
+    width: 350px;
+    border-bottom: 1px solid gray;
+    outline: none;
+    flex-grow: 1;
+}
+.information .info-3 .infoo-1 .per-info{
+    display: flex;
+    column-gap: 200px;
+    flex-wrap: wrap;
+}
+
+/* -----------info-3------------ */
+
+.information .info-4 .infoo-2 .per-info .per-info-1 p{
+    font-size: 15px;
+    font-weight: 600;
+}
+.information .info-4 .infoo-2 .per-info .per-info-1{
+    padding-top: 20px;
+}
+.information .info-4 .infoo-2 .per-info .per-info-1 input, .information .info .infoo-2 .per-info .per-info-2 input{
+    border: none;
+    background-color: transparent;
+    color: gray;
+    width: 350px;
+    border-bottom: 1px solid gray;
+    outline: none;
+    flex-grow: 1;
+}
+.information .info-4 .infoo-2 .per-info{
+    display: flex;
+    column-gap: 200px;
+    flex-wrap: wrap;
+}   
+.information .info-4 .infoo-2 h4{
+    color: red;
+}
+.information .info-4 .infoo-2 p{
+    font-weight: 600;
+}
+.information .info-4 .infoo-2 input{
+    border: none;
+    background-color: transparent;
+    color: gray;
+    width: 800px;
+    border-bottom: 1px solid gray;
+    outline: none;
+    flex-grow: 1;
+}
+
+/* ----------responsive---------- */
+
+@media only screen and (max-width: 600px){
+    /* ---------info----------- */
+
+    .information{
+        width: 100%;
+        padding-left: 50%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-right: 4%;
+    }
+    .information .info-4 .infoo-2 input{
+        border: none;
+        background-color: transparent;
+        color: gray;
+        width: 350px;
+        border-bottom: 1px solid gray;
+        outline: none;
+        flex-grow: 1;
+    }
+}

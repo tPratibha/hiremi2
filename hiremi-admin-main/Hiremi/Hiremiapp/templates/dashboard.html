@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/861ce09321.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $('header nav ul').toggleClass('show');
+            });
+        })
+    </script>
+
+    <title>State Ranking</title>
+    <link rel="stylesheet" href="{% static "css/dashboard.css" %}">
+</head>
+<body>
+    <header>
+        <h1><img class="logo" src="{% static "asset/icon.png" %}" alt=""></h1>
+        <p>Super Admin</p>   
+            <nav>
+                <ul>
+                    <li></li>
+                    <li><a href="{% url 'dashboard' %}"><i class='bx bx-home-alt'></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
+                    <li><a href="#"><i class="fa-solid fa-file-arrow-down"></i> App Download Status</a></li>
+                    <li><a href="{% url 'Mentoreship' %}"><i class='bx bxs-graduation'></i> Mentorship</a></li>
+                    <li><a href="{% url 'internship' %}"><i class="fa-solid fa-desktop"></i> Internship</a></li>
+                    <li><a href="{% url 'fresher' %}"><i class="fa-solid fa-laptop-code"></i> Fresher</a></li>
+                    <li><a href="#"><i class='bx bx-briefcase'></i> Experience</a></li>
+                    <li><a href="{% url 'corporate_training' %}"><i class="fa-solid fa-folder-tree"></i> Corporate Training</a></li>
+                    <li><a href="#"><i class="fa-regular fa-file"></i> Courses</a></li>
+                    <li><a href="#"><i class='bx bxs-report'></i> Project Report</a></li>
+                    <li><a href="#"><i class="fa-regular fa-user"></i> Admin Settings</a></li>
+                    <li><a href="{% url 'superuser_logout' %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                </ul>
+            </nav>
+                <label id="btn">
+               <i class="fa-solid fa-bars" ></i>
+         
+               </label>
+    </header>
+    <div class="search">
+        <div class="sec-inp">
+            <div class="inp-bg">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+                <img src="../static/asset/logo.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <div class="ac-in">
+            <h4 class="title">Account Status All</h4>
+        </div>
+        <div class="statement">
+            <div class="ac-st">
+                <div class="icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="state">
+                    <h3>{{user_count}}</h3>
+                    <p1>Total Accounts Created</p1>
+                    <p><a href="{% url "dashboard1" %}">View All</a> <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <div class="sub-st">
+                    <p1>+{{current_month_registrations}}%</p1>
+                    <p>This month</p>
+                </div>
+            </div>
+            <br>
+            <div class="ac-st">
+                <div class="icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="state">
+                    <h3>{{verified_count}}</h3>
+                    <p1>Total Accounts Verified</p1>
+                    <p><a href="{% url "dashboard2" %}">view All</a> <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <div class="sub-st">
+                    <p1>+32%</p1>
+                    <p>This month</p>
+                </div>
+            </div>
+        </div>
+        <div class="statement">
+            <div class="ac-st">
+                <div class="icon">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <div class="state">
+                    <h3>{{payment_count}}</h3>
+                    <p1>Payment Done (Under Verification)</p1>
+                    <p><a href="{% url "dashboard3" %}">view All</a> <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <div class="sub-st">
+                    <p1>+32%</p1>
+                    <p>This month</p>
+                </div>
+            </div>
+            <br>
+            <div class="ac-st">
+                <div class="icon">
+                    <i class="fa-solid fa-file-circle-xmark"></i>
+                </div>
+                <div class="state">
+                    <h3>{{unverified_count}}</h3>
+                    <p1>Non-Verified Accounts</p1>
+                    <p><a href="{% url "dashboard4" %}">view All</a> <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <div class="sub-st">
+                    <p1>+40%</p1>
+                    <p>This month</p>
+                </div><br>
+            </div>
+        </div><br><br><br><br>
+        <div class="list">
+            <h4 class="title">State Ranking</h4>
+        </div><br>
+        <div class="list-items">
+              <ul>
+                <li>Download App</li>
+                <li>Accounts Verified</li>
+                <li>Non-Verified Accounts</li>
+            </ul>
+
+            {% comment %} <div>
+                <button onclick="sortStates('total')">Sort by Total</button>
+                <button onclick="sortStates('verified')">Sort by Verified</button>
+                <button onclick="sortStates('unverified')">Sort by Unverified</button>
+            </div> {% endcomment %}
+        </div><br><br>
+        <div class="list1">
+            <div class="list-type">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.NO</th>
+                            <th>State List</th>
+                            <th>Download App</th>
+                            <th>Account Verified</th>
+                            <th>Non-Verified Account</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for state, counts in state_counts.items %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ state }}</td>
+                            <td>{{ counts.total }}</td>
+                            <td>{{ counts.verified }}</td>
+                            <td>{{ counts.unverified }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

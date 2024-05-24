@@ -1,0 +1,266 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/861ce09321.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/dashboard1.css" %}">
+</head>
+<body>
+    <header>
+        <h1><img src="{% static "asset/icon.png" %}" alt=""></h1>
+        <p>Super Admin</p>
+        <nav>
+            <ul>
+                <li></li>
+                <li><a href="{% url "dashboard" %}"><i class='bx bx-home-alt'></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-arrow-down"></i>  App Download Status</a></li>
+                <li><a href="{% url "Mentoreship" %}"><i class='bx bxs-graduation' ></i> Mentorship</a></li>
+                <li><a href="{% url "internship" %}"><i class="fa-solid fa-desktop"></i> Internship</a></li>
+                <li><a href="{% url "fresher" %}"><i class="fa-solid fa-laptop-code"></i> Fresher</a></li>
+                <li><a href="#"><i class='bx bx-briefcase' ></i> Experience</a></li>
+                <li><a href="{% url "corporate_training" %}"><i class="fa-solid fa-folder-tree"></i> Corporate Training</a></li>
+                <li><a href="#"><i class="fa-regular fa-file"></i> Courses</a></li>
+                <li><a href="#"><i class='bx bxs-report'></i> Project Report</a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i> Admin Settings</a></li>
+                <li><a href="{% url "superuser_logout" %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="search">
+        <div class="sec-inp">
+            <div class="inp-bg">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+                <img src="../static/asset/logo.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="list1">
+        <div class="list-type">
+            <table>
+                <thead>
+                    <tr>
+                        <form method="get">
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th>
+                                <select name="branch" id="branch_filter">
+                                    <option value="">All Branches</option>
+                                    <option value="Aerospace Engineering" {% if branch_filter == 'Aerospace Engineering' %} selected {% endif %}>Aerospace Engineering</option>
+                                    <option value="Automotive Engineering" {% if branch_filter == 'Automotive Engineering' %} selected {% endif %}>Automotive Engineering</option>
+                                    <option value="Chemical Engineering" {% if branch_filter == 'Chemical Engineering' %} selected {% endif %}>Chemical Engineering</option>
+                                    <option value="Civil Engineering" {% if branch_filter == 'Civil Engineering' %} selected {% endif %}>Civil Engineering</option>
+                                    <option value="Computer Science and Engineering" {% if branch_filter == 'Computer Science and Engineering' %} selected {% endif %}>Computer Science and Engineering</option>
+                                    <option value="Electrical Engineering" {% if branch_filter == 'Electrical Engineering' %} selected {% endif %}>Electrical Engineering</option>
+                                    <option value="Electronics and Communication Engineering" {% if branch_filter == 'Electronics and Communication Engineering' %} selected {% endif %}>Electronics and Communication Engineering</option>
+                                    <option value="Finance" {% if branch_filter == 'Finance' %} selected {% endif %}>Finance</option>
+                                    <option value="Human Resources" {% if branch_filter == 'Human Resources' %} selected {% endif %}>Human Resources</option>
+                                    <option value="Industrial Engineering" {% if branch_filter == 'Industrial Engineering' %} selected {% endif %}>Industrial Engineering</option>
+                                    <option value="Information Technology" {% if branch_filter == 'Information Technology' %} selected {% endif %}>Information Technology</option>
+                                    <option value="Marine Engineering" {% if branch_filter == 'Marine Engineering' %} selected {% endif %}>Marine Engineering</option>
+                                    <option value="Marketing" {% if branch_filter == 'Marketing' %} selected {% endif %}>Marketing</option>
+                                    <option value="Material Engineering" {% if branch_filter == 'Material Engineering' %} selected {% endif %}>Material Engineering</option>
+                                    <option value="Metallurgical Engineering" {% if branch_filter == 'Metallurgical Engineering' %} selected {% endif %}>Metallurgical Engineering</option>
+                                    <option value="Nuclear Engineering" {% if branch_filter == 'Nuclear Engineering' %} selected {% endif %}>Nuclear Engineering</option>
+                                    <option value="Robotic Engineering" {% if branch_filter == 'Robotic Engineering' %} selected {% endif %}>Robotic Engineering</option>
+                                    <option value="Sale" {% if branch_filter == 'Sale' %} selected {% endif %}>Sale</option>
+                                    <option value="other" {% if branch_filter == 'other' %} selected {% endif %}>Other</option>
+                                    <!-- Add more branches as needed -->
+                                </select>
+                            </th>
+                            
+                            <th>
+                                <select name="year" id="year_filter">
+                                    <option value="">All Years</option>
+                                    <option value="2015" {% if year_filter == '2015' %} selected {% endif %}>2015</option>
+                                    <option value="2016" {% if year_filter == '2016' %} selected {% endif %}>2016</option>
+                                    <option value="2017" {% if year_filter == '2017' %} selected {% endif %}>2017</option>
+                                    <option value="2018" {% if year_filter == '2018' %} selected {% endif %}>2018</option>
+                                    <option value="2019" {% if year_filter == '2019' %} selected {% endif %}>2019</option>
+                                    <option value="2020" {% if year_filter == '2020' %} selected {% endif %}>2020</option>
+                                    <option value="2021" {% if year_filter == '2021' %} selected {% endif %}>2021</option>
+                                    <option value="2022" {% if year_filter == '2022' %} selected {% endif %}>2022</option>
+                                    <option value="2023" {% if year_filter == '2023' %} selected {% endif %}>2023</option>
+                                    <option value="2024" {% if year_filter == '2024' %} selected {% endif %}>2024</option>
+                                    <option value="2025" {% if year_filter == '2025' %} selected {% endif %}>2025</option>
+                                    <option value="2026" {% if year_filter == '2026' %} selected {% endif %}>2026</option>
+                                    <option value="2027" {% if year_filter == '2027' %} selected {% endif %}>2027</option>
+                                    <option value="2028" {% if year_filter == '2028' %} selected {% endif %}>2028</option>
+                                    <option value="2029" {% if year_filter == '2029' %} selected {% endif %}>2029</option>
+                                    <option value="2030" {% if year_filter == '2030' %} selected {% endif %}>2030</option>
+                                    <option value="2031" {% if year_filter == '2031' %} selected {% endif %}>2031</option>
+                                    <option value="2032" {% if year_filter == '2032' %} selected {% endif %}>2032</option>
+                                    <!-- Add more years as needed -->
+                                </select>
+                            </th>
+                            
+                            <th>
+                                <select name="state" id="state_filter">
+                                    <option value="">All States</option>
+                                    <option value="Andaman and Nicobar Island" {% if state_filter == 'Andaman and Nicobar Island' %} selected {% endif %}>Andaman and Nicobar Island 1</option>
+                                    <option value="Andhra Pradesh"{% if state_filter == 'Andhra Pradesh'%} selected {% endif %}>Andhra Pradesh </option>
+                                    <option value="Arunachal Pradesh" {% if state_filter == 'Arunachal Pradesh' %} selected {% endif %}>Arunachal Pradesh</option>
+                                    <option value="Assam" {% if state_filter == 'Assam' %} selected {% endif %}>Assam</option>
+                                    <option value="Bihar" {% if state_filter == 'Bihar' %} selected {% endif %}>Bihar</option>
+                                    <option value="Chhattisghar" {% if state_filter == 'Chhattisghar' %} selected {% endif %}>Chhattisghar</option>
+                                    <option value="Dadar and Nagar Haveli and Daman and Diu" {% if state_filter == 'Dadar and Nagar Haveli and Daman and Diu' %} selected {% endif %}>Dadar and Nagar Haveli and Daman and Diu</option>
+                                    <option value="Delhi" {% if state_filter == 'Delhi' %} selected {% endif %}>Delhi</option>
+                                    <option value="Goa" {% if state_filter == 'Goa' %} selected {% endif %}>Goa</option>
+                                    <option value="Gujarat" {% if state_filter == 'Gujarat' %} selected {% endif %}>Gujarat</option>
+                                    <option value="Haryana" {% if state_filter == 'Haryana' %} selected {% endif %}>Haryana</option>
+                                    <option value="Himachal Pradesh" {% if state_filter == 'Himachal Pradesh' %} selected {% endif %}>Himachal Pradesh</option>
+                                    <option value="Jammu and kashmir" {% if state_filter == 'Jammu and kashmir' %} selected {% endif %}>Jammu and kashmir</option>
+                                    <option value="Jharkhand" {% if state_filter == 'Jharkhand' %} selected {% endif %}>Jharkhand</option>
+                                    <option value="Karnataka" {% if state_filter == 'Karnataka' %} selected {% endif %}>Karnataka</option>
+                                    <option value="Kerala" {% if state_filter == 'Kerala' %} selected {% endif %}>Kerala</option>
+                                    <option value="Ladakh" {% if state_filter == 'Ladakh' %} selected {% endif %}>Ladakh</option>
+                                    <option value="Lakshadweep" {% if state_filter == 'Lakshadweep' %} selected {% endif %}>Lakshadweep</option>
+                                    <option value="Madhya Pradesh" {% if state_filter == 'Madhya Pradesh' %} selected {% endif %}>Madhya Pradesh</option>
+                                    <option value="Maharashtra" {% if state_filter == 'Maharashtra' %} selected {% endif %}>Maharashtra</option>
+                                    <option value="Manipur" {% if state_filter == 'Manipur' %} selected {% endif %}>Manipur</option>
+                                    <option value="Maghalaya" {% if state_filter == 'Maghalaya' %} selected {% endif %}>Maghalaya</option>
+                                    <option value="Mizoram" {% if state_filter == 'Mizoram' %} selected {% endif %}>Mizoram</option>
+                                    <option value="Nagaland" {% if state_filter == 'Nagaland' %} selected {% endif %}>Nagaland</option>
+                                    <option value="Odisha" {% if state_filter == 'Odisha' %} selected {% endif %}>Odisha</option>
+                                    <option value="Puducherry" {% if state_filter == 'Puducherry' %} selected {% endif %}>Puducherry</option>
+                                    <option value="Punjab" {% if state_filter == 'Punjab' %} selected {% endif %}>Punjab</option>
+                                    <option value="Rajasthan" {% if state_filter == 'Rajasthan' %} selected {% endif %}>Rajasthan</option>
+                                    <option value="Sikkim" {% if state_filter == 'Sikkim' %} selected {% endif %}>Sikkim</option>
+                                    <option value="Tamil Nadu" {% if state_filter == 'Tamil Nadu' %} selected {% endif %}>Tamil Nadu</option>
+                                    <option value="Telangana" {% if state_filter == 'Telangana' %} selected {% endif %}>Telangana</option>
+                                    <option value="Tripura" {% if state_filter == 'Tripura' %} selected {% endif %}>Tripura</option>
+                                    <option value="Uttar Pradesh" {% if state_filter == 'Uttar Pradesh' %} selected {% endif %}>Uttar Pradesh</option>
+                                    <option value="Uttarakhand" {% if state_filter == 'Uttarakhand' %} selected {% endif %}>Uttarakhand</option>
+                                    <option value="West Bengal" {% if state_filter == 'West Bengal' %} selected {% endif %}>West Bengal</option>
+                                    <!-- Add more states as needed -->
+                                </select>
+                            </th>
+                            
+                            <th>
+                                <select name="birth_state" id="birth_state_filter">
+                                    <option value="">All Birth States</option>
+                                    <option value="Andaman and Nicobar Island" {% if state_filter == 'Andaman and Nicobar Island' %} selected {% endif %}>Andaman and Nicobar Island 1</option>
+                                    <option value="Andhra Pradesh"{% if state_filter == 'Andhra Pradesh'%} selected {% endif %}>Andhra Pradesh </option>
+                                    <option value="Arunachal Pradesh" {% if state_filter == 'Arunachal Pradesh' %} selected {% endif %}>Arunachal Pradesh</option>
+                                    <option value="Assam" {% if state_filter == 'Assam' %} selected {% endif %}>Assam</option>
+                                    <option value="Bihar" {% if state_filter == 'Bihar' %} selected {% endif %}>Bihar</option>
+                                    <option value="Chhattisghar" {% if state_filter == 'Chhattisghar' %} selected {% endif %}>Chhattisghar</option>
+                                    <option value="Dadar and Nagar Haveli and Daman and Diu" {% if state_filter == 'Dadar and Nagar Haveli and Daman and Diu' %} selected {% endif %}>Dadar and Nagar Haveli and Daman and Diu</option>
+                                    <option value="Delhi" {% if state_filter == 'Delhi' %} selected {% endif %}>Delhi</option>
+                                    <option value="Goa" {% if state_filter == 'Goa' %} selected {% endif %}>Goa</option>
+                                    <option value="Gujarat" {% if state_filter == 'Gujarat' %} selected {% endif %}>Gujarat</option>
+                                    <option value="Haryana" {% if state_filter == 'Haryana' %} selected {% endif %}>Haryana</option>
+                                    <option value="Himachal Pradesh" {% if state_filter == 'Himachal Pradesh' %} selected {% endif %}>Himachal Pradesh</option>
+                                    <option value="Jammu and kashmir" {% if state_filter == 'Jammu and kashmir' %} selected {% endif %}>Jammu and kashmir</option>
+                                    <option value="Jharkhand" {% if state_filter == 'Jharkhand' %} selected {% endif %}>Jharkhand</option>
+                                    <option value="Karnataka" {% if state_filter == 'Karnataka' %} selected {% endif %}>Karnataka</option>
+                                    <option value="Kerala" {% if state_filter == 'Kerala' %} selected {% endif %}>Kerala</option>
+                                    <option value="Ladakh" {% if state_filter == 'Ladakh' %} selected {% endif %}>Ladakh</option>
+                                    <option value="Lakshadweep" {% if state_filter == 'Lakshadweep' %} selected {% endif %}>Lakshadweep</option>
+                                    <option value="Madhya Pradesh" {% if state_filter == 'Madhya Pradesh' %} selected {% endif %}>Madhya Pradesh</option>
+                                    <option value="Maharashtra" {% if state_filter == 'Maharashtra' %} selected {% endif %}>Maharashtra</option>
+                                    <option value="Manipur" {% if state_filter == 'Manipur' %} selected {% endif %}>Manipur</option>
+                                    <option value="Maghalaya" {% if state_filter == 'Maghalaya' %} selected {% endif %}>Maghalaya</option>
+                                    <option value="Mizoram" {% if state_filter == 'Mizoram' %} selected {% endif %}>Mizoram</option>
+                                    <option value="Nagaland" {% if state_filter == 'Nagaland' %} selected {% endif %}>Nagaland</option>
+                                    <option value="Odisha" {% if state_filter == 'Odisha' %} selected {% endif %}>Odisha</option>
+                                    <option value="Puducherry" {% if state_filter == 'Puducherry' %} selected {% endif %}>Puducherry</option>
+                                    <option value="Punjab" {% if state_filter == 'Punjab' %} selected {% endif %}>Punjab</option>
+                                    <option value="Rajasthan" {% if state_filter == 'Rajasthan' %} selected {% endif %}>Rajasthan</option>
+                                    <option value="Sikkim" {% if state_filter == 'Sikkim' %} selected {% endif %}>Sikkim</option>
+                                    <option value="Tamil Nadu" {% if state_filter == 'Tamil Nadu' %} selected {% endif %}>Tamil Nadu</option>
+                                    <option value="Telangana" {% if state_filter == 'Telangana' %} selected {% endif %}>Telangana</option>
+                                    <option value="Tripura" {% if state_filter == 'Tripura' %} selected {% endif %}>Tripura</option>
+                                    <option value="Uttar Pradesh" {% if state_filter == 'Uttar Pradesh' %} selected {% endif %}>Uttar Pradesh</option>
+                                    <option value="Uttarakhand" {% if state_filter == 'Uttarakhand' %} selected {% endif %}>Uttarakhand</option>
+                                    <option value="West Bengal" {% if state_filter == 'West Bengal' %} selected {% endif %}>West Bengal</option>
+                                    <!-- Add more birth states as needed -->
+                                </select>
+                            </th>
+                            
+                            <th>
+                                <select name="gender" id="gender_filter">
+                                    <option value="">All Genders</option>
+                                    <option value="male" {% if gender_filter == 'male' %} selected {% endif %}>Male</option>
+                                    <option value="female" {% if gender_filter == 'female' %} selected {% endif %}>Female</option>
+                                    <!-- Add more genders as needed -->
+                                </select>
+                            </th>
+                            
+                            <th>
+                                <select name="status" id="status_filter">
+                                    <option value="">All Statuses</option>
+                                    <option value="True" {% if status_filter == 'True' %} selected {% endif %}>Verified</option>
+                                    <option value="False" {% if status_filter == 'False' %} selected {% endif %}>Pending</option>
+                                    <!-- Add more statuses as needed -->
+                                </select>
+                            </th>
+                            <th><button type="submit">Filter</button></th>
+                            
+
+
+                        </form>
+                    </tr>
+                    <tr>
+                        <th>S.NO</th>
+                        <th>UTR.No</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone No</th>
+                        <th>College Name</th>
+                        <th>Branch <span><></span></th>
+                        <th>Passing Year <span><></span></th>
+                        <th>College State <span><></span></th>
+                        <th>Birth Place State <span><></span></th>
+                        <th>Gender</th>
+                        <th>Status <span><></span></th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>********</td>
+                        <td>{{i.full_name}}</td>
+                        <td>{{i.email}} </td>
+                        <td>{{i.phone_number}} </td>
+                        <td>{{i.college_name}} </td>
+                        <td>{{i.branch_name}}</td>
+                        <td>{{i.passing_year}}</td> 
+                        <td>{{i.college_state}} </td>
+                        <td>{{i.date_of_birth}} </td>
+                        <td>{{i.gender}} </td>
+                        <td><div class="ver2">Verified</div></td>
+                        <td><div class="view"><a href="{% url "view_Info2" pk=i.id %}">View</a></div></td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                
+            </table>
+            <div class="pagination">
+                {% if data.has_previous %}
+                    <a href="?page=1&college={{ college_filter }}&branch={{ branch_filter }}&year={{ year_filter }}&state={{ state_filter }}&birth_state={{ birth_state_filter }}&status={{ status_filter }}">&laquo; first</a>
+                    <a href="?page={{ data.previous_page_number }}&college={{ college_filter }}&branch={{ branch_filter }}&year={{ year_filter }}&state={{ state_filter }}&birth_state={{ birth_state_filter }}&status={{ status_filter }}">previous</a>
+                {% endif %}
+                <span class="current">
+                    <b>Page {{ data.number }} of {{ data.paginator.num_pages }}.</b>
+                </span>
+                {% if data.has_next %}
+                    <a href="?page={{ data.next_page_number }}&college={{ college_filter }}&branch={{ branch_filter }}&year={{ year_filter }}&state={{ state_filter }}&birth_state={{ birth_state_filter }}&status={{ status_filter }}">next</a>
+                    <a href="?page={{ data.paginator.num_pages }}&college={{ college_filter }}&branch={{ branch_filter }}&year={{ year_filter }}&state={{ state_filter }}&birth_state={{ birth_state_filter }}&status={{ status_filter }}">last &raquo;</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

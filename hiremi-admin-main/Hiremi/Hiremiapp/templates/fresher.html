@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/861ce09321.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>State Ranking</title>
+    <link rel="stylesheet" href="{% static "css/mentoreship.css" %}">
+</head>
+<body>
+    <header>
+        <h1><img src="{% static "asset/icon.png" %}" alt=""></h1>
+        <p>Super Admin</p>
+        <nav>
+            <ul>
+                <li></li>
+                <li><a href="{% url "dashboard" %}"><i class='bx bx-home-alt'></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-arrow-down"></i>  App Download Status</a></li>
+                <li><a href="{% url "Mentoreship" %}"><i class='bx bxs-graduation' ></i> Mentorship</a></li>
+                <li><a href="{% url "internship" %}"><i class="fa-solid fa-desktop"></i> Internship</a></li>
+                <li><a href="{% url "fresher" %}"><i class="fa-solid fa-laptop-code"></i> Fresher</a></li>
+                <li><a href="#"><i class='bx bx-briefcase' ></i> Experience</a></li>
+                <li><a href="{% url "corporate_training" %}"><i class="fa-solid fa-folder-tree"></i> Corporate Training</a></li>
+                <li><a href="#"><i class="fa-regular fa-file"></i> Courses</a></li>
+                <li><a href="#"><i class='bx bxs-report'></i> Project Report</a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i> Admin Settings</a></li>
+                <li><a href="{% url "superuser_logout" %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="search">
+        <div class="sec-inp">
+            <div class="inp-bg">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+                <img src="../static/asset/logo.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="account">
+        <div class="ac-in">
+            <h4 class="title">Fresher Status All</h4>
+        </div>
+        <div class="statement">
+            <div class="ac-st">
+                <div class="icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="state">
+                    <h3>{{fresher_count}}</h3>
+                    <p1>Fresher Applied</p1>
+                    <p><a href="{% url "fresher_dash1" %}">View All</a> <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <div class="sub-st">
+                    <p1>+40%</p1>
+                    <p>This month</p>
+                </div>
+            </div>
+            <br>
+            <div class="ac-st">
+                <div class="icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="state">
+                    <h3>{{select_count}}</h3>
+                    <p1>Selected</p1>
+                    <p><a href="{% url "fresher_dash2" %}">view All</a> <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <div class="sub-st">
+                    <p1>+32%</p1>
+                    <p>This month</p>
+                </div>
+            </div>
+        </div>
+        <div class="statement">
+            <div class="ac-st">
+                <div class="icon">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <div class="state">
+                    <h3>{{Reject_count}}</h3>
+                    <p1>Rejected</p1>
+                    <p><a href="{% url "fresher_dash3" %}">view All</a> <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <div class="sub-st">
+                    <p1>+32%</p1>
+                    <p>This month</p>
+                </div>
+            </div>
+            <br>
+            <div class="ac-st">
+                <div class="icon">
+                    <i class="fa-solid fa-file-circle-xmark"></i>
+                </div>
+                <div class="state">
+                    <h3>10</h3>
+                    <p1>Waiting For Payment</p1>
+                    <p>view All <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <div class="sub-st">
+                    <p1>+40%</p1>
+                    <p>This month</p>
+                </div><br>
+            </div>
+        </div>
+        <div class="statement">
+            <div class="ac-st">
+                <div class="icon">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <div class="state">
+                    <h3>30</h3>
+                    <p1>Acceped</p1>
+                    <p><a href="">view All</a> <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <div class="sub-st">
+                    <p1>+32%</p1>
+                    <p>This month</p>
+                </div>
+            </div>
+            <br>
+            <div class="ac-st">
+                <div class="icon">
+                    <i class="fa-solid fa-file-circle-xmark"></i>
+                </div>
+                <div class="state">
+                    <h3>{{Notenroll_count}}</h3>
+                    <p1>Non-Enroll</p1>
+                    <p>view All <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <div class="sub-st">
+                    <p1>+40%</p1>
+                    <p>This month</p>
+                </div><br>
+            </div>
+        </div><br><br><br><br>
+        
+        
+            </div>
+        </div>
+    </div>
+</body>
+</html>

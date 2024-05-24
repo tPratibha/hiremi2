@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/861ce09321.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireMi</title>
+    <link rel="stylesheet" href="{% static "css\login.css" %}">
+</head>
+<body>
+    <div class="bg">
+        <div class="login">
+            <div class="logo">
+                <img class="" src="{% static "asset/icon.png" %}" alt="">
+            </div>
+            <div class="log">
+                <form  action="{% url "superuser_login" %}" method="POST">
+                    {% csrf_token %}
+                    <h2>Admin Login</h2><br><br>
+                    <label>username</label><br><br><i class="fa-solid fa-user"></i>
+                    <input type="text" name="username" id="Uname" placeholder="Type your Username"></input><br><br><br>  
+                    <i class="fa-solid fa-unlock"></i><input type="Password" name="password" id="Pass" placeholder="Password"><br><br>
+                    <p>Forgot Password?</p><br><br>
+                    <div class="logb">
+                        <input type="submit" name="log" id="log" value="LogIn">  
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% if messages %}
+    {% for message in messages %}
+        <div>{{ message }}</div>
+    {% endfor %}
+{% endif %}
+    </div>
+
+</body>
+</html>

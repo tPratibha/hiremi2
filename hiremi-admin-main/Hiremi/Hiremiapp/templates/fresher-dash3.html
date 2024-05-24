@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/861ce09321.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/mentor-dash1.css" %}">
+</head>
+<body>
+    <header>
+        <h1><img src="{% static "asset/icon.png" %}" alt=""></h1>
+        <p>Super Admin</p>
+        <nav>
+            <ul>
+                <li></li>
+                <li><a href="{% url "dashboard" %}"><i class='bx bx-home-alt'></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-arrow-down"></i>  App Download Status</a></li>
+                <li><a href="{% url "Mentoreship" %}"><i class='bx bxs-graduation' ></i> Mentorship</a></li>
+                <li><a href="{% url "internship" %}"><i class="fa-solid fa-desktop"></i> Internship</a></li>
+                <li><a href="{% url "fresher" %}"><i class="fa-solid fa-laptop-code"></i> Fresher</a></li>
+                <li><a href="#"><i class='bx bx-briefcase' ></i> Experience</a></li>
+                <li><a href="{% url "corporate_training" %}"><i class="fa-solid fa-folder-tree"></i> Corporate Training</a></li>
+                <li><a href="#"><i class="fa-regular fa-file"></i> Courses</a></li>
+                <li><a href="#"><i class='bx bxs-report'></i> Project Report</a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i> Admin Settings</a></li>
+                <li><a href="{% url "superuser_logout" %}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="search">
+        <div class="sec-inp">
+            <div class="inp-bg">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+                <img src="../static/asset/logo.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="list1">
+        <div class="list-type">
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.NO</th>
+                        <th>UID.No</th>
+                        <th>Email</th>
+                        <th>Status <span><></span></th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{i.uid}}</td>
+                        <td>{{i.email}} </td>
+                        <td><div class="ver2">{{i.company_name}}</div></td>
+                        <td><div class="ver2">{{i.candidate_status}}</div></td>
+                        <td><div class="view"><a href="{% url "fresher_info1" pk=i.id %}">View</a></div></td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
