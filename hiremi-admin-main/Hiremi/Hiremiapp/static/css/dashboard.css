@@ -2,6 +2,7 @@
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 header {
@@ -14,35 +15,37 @@ header {
   padding: 10px 20px;
 }
 
-header h1{
+header h1 {
   font-size: 50px;
 }
-header p{
+header p {
   font-size: 12px;
   padding-left: 40px;
   padding-bottom: 20px;
 }
 
-header nav{
+header nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 header nav ul {
   list-style-type: none;
+  padding-top: 30px;
 }
-header nav ul li:first-child{
+header nav ul li {
+  width: 100%;
+  padding-top: 30px;
+}
+header nav ul li:first-child {
   background-color: #f2f2f281;
   height: 10px;
   position: absolute;
   width: 85%;
   border-radius: 6px;
 }
-header nav ul li {
-  width: 100%;
-  padding: 10px 0px 20px 20px;
-}
-header i{
+
+header i {
   padding-right: 10px;
   font-size: 20px;
 }
@@ -50,38 +53,41 @@ header nav a {
   color: white;
   text-decoration: none;
 }
-.search{
+nav ul.show {
+  left: 0;
+}
+.search {
   background-color: #f2f2f2;
   width: 100%;
   height: 100%;
   padding-bottom: 50px;
 }
-.sec-inp{
+.sec-inp {
   background-color: #f2f2f2;
   width: 100%;
 }
-.inp-bg{
+.inp-bg {
   padding-left: 100px;
   padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.inp-bg i{
+.inp-bg i {
   font-size: 25px;
   color: red;
   position: absolute;
   left: 34%;
 }
-.inp-bg img{
+.inp-bg img {
   position: absolute;
   right: 28%;
 }
-.inp-bg input::placeholder{
+.inp-bg input::placeholder {
   padding-left: 50px;
   font-size: 25px;
 }
-.inp-bg input{
+.inp-bg input {
   border-radius: 20px;
   box-shadow: 1px 0.5px 5px 0.5px;
   padding: 10px;
@@ -90,19 +96,19 @@ header nav a {
   border: none;
   outline: none;
 }
-.sec-inp img{
+.sec-inp img {
   width: 70px;
 }
-.account{
+.account {
   background-color: #f2f2f2;
   width: 100%;
   height: 50%;
 }
-.account h4{
+.account h4 {
   text-align: center;
   color: red;
 }
-.ac-in h4{
+.ac-in h4 {
   padding-top: 25px;
   display: grid;
   width: 70%;
@@ -112,25 +118,26 @@ header nav a {
   align-items: center;
   column-gap: 0px;
 }
-.ac-in{
+.ac-in {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-.ac-in h4::before, .ac-in h4::after{
+.ac-in h4::before,
+.ac-in h4::after {
   content: "";
   height: 2px;
   background-color: #000;
   display: inline;
 }
-.statement{
+.statement {
   display: flex;
   justify-content: center;
   column-gap: 100px;
   margin-left: 200px;
 }
-.ac-st{
+.ac-st {
   background-color: #fff;
   border-radius: 10px;
   position: relative;
@@ -143,13 +150,13 @@ header nav a {
   padding-left: 20px;
   margin-top: 50px;
 }
-.ac-st .icon{
+.ac-st .icon {
   background: linear-gradient(30deg, red, rgb(0, 0, 0));
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-.ac-st .icon i{
+.ac-st .icon i {
   padding: 12px;
   color: white;
   display: flex;
@@ -157,42 +164,43 @@ header nav a {
   font-size: 25px;
   border-radius: 50%;
 }
-.state{
+.state {
   padding-left: 20px;
 }
-.state h3, .state p{
+.state h3,
+.state p {
   color: red;
 }
-.state h3{
+.state h3 {
   padding-top: 20px;
   font-size: 30px;
 }
-.state p1{
+.state p1 {
   font-weight: 600;
   font-size: 15px;
 }
-.state p{
+.state p {
   padding-top: 20px;
 }
-.sub-st{
+.sub-st {
   position: absolute;
   right: 6%;
   text-align: end;
   padding-top: 70px;
 }
-.sub-st p1{
+.sub-st p1 {
   text-align: end;
   color: springgreen;
 }
-.sub-st p{
+.sub-st p {
   font-size: 15px;
   color: lightgray;
 }
-.list{
+.list {
   display: flex;
   justify-content: center;
 }
-.list h4{
+.list h4 {
   font-size: 30px;
   display: grid;
   width: 70%;
@@ -201,23 +209,24 @@ header nav a {
   align-items: center;
   column-gap: 0px;
 }
-.list h4::before, .list h4::after{
+.list h4::before,
+.list h4::after {
   content: "";
   height: 2px;
   background-color: #000;
   display: inline;
 }
-.list-items{
+.list-items {
   display: flex;
   justify-content: end;
 }
-.list-items ul{
+.list-items ul {
   display: flex;
   list-style: none;
   column-gap: 20px;
   padding-right: 100px;
 }
-.list-items ul li{
+.list-items ul li {
   font-size: 12px;
   font-weight: 600;
   color: white;
@@ -225,232 +234,94 @@ header nav a {
   border-radius: 20px;
   background: linear-gradient(30deg, red, rgb(0, 0, 0));
 }
-.list1 .list-type{
+.list1 .list-type {
   margin-left: 15%;
 }
-table{
+table {
   width: 100%;
 }
-table,th,td{
+table,
+th,
+td {
   padding: 20px;
 }
-table,th,td{
+table,
+th,
+td {
   border-bottom: 2px solid gray;
   border-spacing: 0;
 }
-table, td{
+table,
+td {
   text-align: center;
   border-bottom: 2px solid lightgray;
 }
-table, tbody{
+table,
+tbody {
   text-align: center;
 }
-th{
+th {
   font-size: 20px;
 }
 
-@media only screen and (max-width: 900px){
-  .search{
-      background-color: #f2f2f2;
-      height: 100%;
-      width: 140%;
-      padding-left: 10%;
-      padding-bottom: 50px;
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+    height: auto;
+    position: relative;
   }
-  .inp-bg{
-      padding-left: 240px;
-      padding-top: 20px;
-      width: 60%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+  .search {
+    margin-left: 1200px;
+    width: 100%;
   }
-  .sec-inp{
-      width: 100%;
+
+  .statement {
+    margin-left: 0;
   }
-  .inp-bg i{
-      font-size: 25px;
-      color: red;
-      position: absolute;
-      left: 60%;
+
+  .ac-in h4 {
+    padding-left: 0;
+    font-size: 20px;
   }
-  .inp-bg img{
-      position: absolute;
-      left: 120%;
+
+  .list h4 {
+    padding-left: 0;
+    font-size: 20px;
   }
-  .inp-bg input::placeholder{
-      padding-left: 50px;
-      font-size: 25px;
+
+  .list-items ul {
+    padding-right: 20px;
   }
-  .inp-bg input{
-      border-radius: 20px;
-      box-shadow: 1px 0.5px 5px 0.5px;
-      padding: 10px;
-      height: 40px;
-      width: 600px;
-      border: none;
-      outline: none;
+
+  .inp-bg input {
+    width: calc(100% - 40px);
+    padding: 10px 20px;
   }
-  .sec-inp img{
-      width: 70px;
+
+  .ac-st {
+    width: calc(100% - 40px);
   }
-  .account{
-      background-color: #f2f2f2;
-      width: 150%;
-      height: 50%;
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 30px;
   }
-  .account h4{
-      text-align: center;
-      color: red;
+
+  .ac-in h4 {
+    font-size: 15px;
   }
-  .ac-in h4{
-      padding-top: 25px;
-      display: grid;
-      width: 70%;
-      font-size: 15px;
-      grid-template-columns: repeat(3, 1fr);
-      padding-left: 220px;
-      align-items: center;
-      column-gap: 0px;
+
+  .list h4 {
+    font-size: 15px;
   }
-  .ac-in{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+
+  .inp-bg input {
+    font-size: 15px;
   }
-  .ac-in h4::before, .ac-in h4::after{
-      content: "";
-      height: 2px;
-      background-color: #000;
-      display: inline;
-  }
-  .statement{
-      display: flex;
-      justify-content: center;
-      column-gap: 10px;
-      margin-left: 230px;
-  }
-  .ac-st{
-      background-color: #fff;
-      border-radius: 10px;
-      position: relative;
-      border-left: 5px solid red;
-      width: 200px;
-      display: flex;
-      align-items: center;
-      padding-bottom: 10px;
-      height: 80px;
-      padding-left: 10px;
-      margin-top: 50px;
-  }
-  .ac-st .icon{
-      background: linear-gradient(30deg, red, rgb(0, 0, 0));
-      width: 35px;
-      height: 40px;
-      border-radius: 50%;
-  }
-  .ac-st .icon i{
-      padding: 12px;
-      color: white;
-      display: flex;
-      justify-content: center;
-      font-size: 15px;
-      border-radius: 50%;
-  }
-  .state{
-      padding-right: 20px;
-      padding-left: 20px;
-  }
-  .state h3, .state p{
-      color: red;
-  }
-  .state h3{
-      padding-top: 20px;
-      font-size: 20px;
-  }
-  .state p1{
-      font-weight: 600;
-      font-size: 10px;
-  }
-  .state p{
-      font-size: 12px;
-      padding-top: 5px;
-  }
-  .sub-st{
-      position: absolute;
-      right: 2%;
-      text-align: end;
-      padding-top: 70px;
-  }
-  .sub-st p1{
-      font-size: 10px;
-      text-align: end;
-      color: springgreen;
-  }
-  .sub-st p{
-      font-size: 10px;
-      color: lightgray;
-  }
-  .list{
-      display: flex;
-      justify-content: center;
-  }
-  .list h4{
-      font-size: 15px;
-      display: grid;
-      width: 70%;
-      grid-template-columns: repeat(3, 1fr);
-      padding-left: 220px;
-      align-items: center;
-      column-gap: 0px;
-  }
-  .list h4::before, .list h4::after{
-      content: "";
-      height: 2px;
-      background-color: #000;
-      display: inline;
-  }
-  .list-items{
-      display: flex;
-      justify-content: end;
-  }
-  .list-items ul{
-      display: flex;
-      list-style: none;
-      column-gap: 20px;
-      padding-right: 10px;
-  }
-  .list-items ul li{
-      font-size: 10px;
-      font-weight: 600;
-      color: white;
-      padding: 8px;
-      border-radius: 20px;
-      background: linear-gradient(30deg, red, rgb(0, 0, 0));
-  }
-  .list1 .list-type{
-      margin-left: 30%;
-  }
-  thead,th{
-      font-size: 14px;
-  }
-  table{
-      width: 100%;
-  }
-  table,th,td{
-      padding: 10px;
-  }
-  table,th,td{
-      border-bottom: 2px solid gray;
-      border-spacing: 0;
-  }
-  table, td{
-      font-size: 13px;
-      text-align: center;
-      border-bottom: 2px solid lightgray;
-  }
-  table, tbody{
-      text-align: center;
+
+  .state h3 {
+    font-size: 20px;
   }
 }
