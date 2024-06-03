@@ -65,7 +65,7 @@
                 <div class="state">
                     <h3>{{user_count}}</h3>
                     <p1>Total Accounts Created</p1>
-                    <p><a href="{% url "dashboard1" %}">View All</a> <i class="fa-solid fa-arrow-right"></i></p>
+                    <p><a class="view" href="{% url "dashboard1" %}">View All</a> <i class="fa-solid fa-arrow-right"></i></p>
                 </div>
                 <div class="sub-st">
                     <p1>+{{current_month_registrations}}%</p1>
@@ -80,7 +80,7 @@
                 <div class="state">
                     <h3>{{verified_count}}</h3>
                     <p1>Total Accounts Verified</p1>
-                    <p><a href="{% url "dashboard2" %}">view All</a> <i class="fa-solid fa-arrow-right"></i></p>
+                    <p><a class="view" href="{% url "dashboard2" %}">view All</a> <i class="fa-solid fa-arrow-right"></i></p>
                 </div>
                 <div class="sub-st">
                     <p1>+32%</p1>
@@ -96,7 +96,7 @@
                 <div class="state">
                     <h3>{{payment_count}}</h3>
                     <p1>Payment Done (Under Verification)</p1>
-                    <p><a href="{% url "dashboard3" %}">view All</a> <i class="fa-solid fa-arrow-right"></i></p>
+                    <p><a class="view" href="{% url "dashboard3" %}">view All</a> <i class="fa-solid fa-arrow-right"></i></p>
                 </div>
                 <div class="sub-st">
                     <p1>+32%</p1>
@@ -111,7 +111,7 @@
                 <div class="state">
                     <h3>{{unverified_count}}</h3>
                     <p1>Non-Verified Accounts</p1>
-                    <p><a href="{% url "dashboard4" %}">view All</a> <i class="fa-solid fa-arrow-right"></i></p>
+                    <p class="view"><a  href="{% url "dashboard4" %}">view All</a> <i class="fa-solid fa-arrow-right"></i></p>
                 </div>
                 <div class="sub-st">
                     <p1>+40%</p1>

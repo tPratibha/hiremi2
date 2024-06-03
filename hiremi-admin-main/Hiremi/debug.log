@@ -679,3 +679,154 @@ Traceback (most recent call last):
   File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\adapters.py", line 610, in send
     raise ConnectTimeout(e, request=request)
 requests.exceptions.ConnectTimeout: HTTPConnectionPool(host='13.127.81.177', port=8000): Max retries exceeded with url: /transactions/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001DE16AD5A30>, 'Connection to 13.127.81.177 timed out. (connect timeout=None)'))
+Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connection.py", line 400, in request
+    self.endheaders()
+  File "C:\Users\91871\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\91871\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Users\91871\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connection.py", line 207, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x0000026CC9168F80>, 'Connection to 13.127.81.177 timed out. (connect timeout=None)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\adapters.py", line 589, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='13.127.81.177', port=8000): Max retries exceeded with url: /api/registers/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026CC9168F80>, 'Connection to 13.127.81.177 timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\Hiremiapp\views.py", line 48, in dashboard
+    data = requests.get(registrations_url).json()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\adapters.py", line 610, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPConnectionPool(host='13.127.81.177', port=8000): Max retries exceeded with url: /api/registers/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026CC9168F80>, 'Connection to 13.127.81.177 timed out. (connect timeout=None)'))
+Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connection.py", line 400, in request
+    self.endheaders()
+  File "C:\Users\91871\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\91871\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Users\91871\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connection.py", line 238, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connection.py", line 207, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x0000026A69CAF770>, 'Connection to 13.127.81.177 timed out. (connect timeout=None)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\adapters.py", line 589, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='13.127.81.177', port=8000): Max retries exceeded with url: /api/registers/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026A69CAF770>, 'Connection to 13.127.81.177 timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\Hiremiapp\views.py", line 48, in dashboard
+    data = requests.get(registrations_url).json()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91871\Desktop\hiremi-admin-main\hiremi-admin-main\Hiremi\env\Lib\site-packages\requests\adapters.py", line 610, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPConnectionPool(host='13.127.81.177', port=8000): Max retries exceeded with url: /api/registers/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026A69CAF770>, 'Connection to 13.127.81.177 timed out. (connect timeout=None)'))
+"GET /dashboard/ HTTP/1.1" 500 180143
