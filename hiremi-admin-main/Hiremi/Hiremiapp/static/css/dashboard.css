@@ -36,13 +36,13 @@ header nav ul li {
   width: 100%;
   padding-top: 30px;
 }
-header nav ul li:first-child {
+/* header nav ul li:first-child {
   background-color: #f2f2f281;
   height: 10px;
   position: absolute;
   width: 85%;
   border-radius: 6px;
-}
+} */
 
 header i {
   padding-right: 10px;

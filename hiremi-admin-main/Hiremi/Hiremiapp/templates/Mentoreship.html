@@ -8,6 +8,15 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>State Ranking</title>
     <link rel="stylesheet" href="{% static "css/mentoreship.css" %}">
+    <style>
+    header nav ul li:nth-child(4){
+ 
+    background-color: #f2f2f281;
+    height: 10px;
+    border-left: 5px solid white;
+    width: 100%;
+    border-radius: 6px;
+    }</style>
 </head>
 <body>
     <header>
@@ -15,7 +24,7 @@
         <p>Super Admin</p>
         <nav>
             <ul>
-                <li></li>
+                
                 <li><a href="{% url "dashboard" %}"><i class='bx bx-home-alt'></i> Dashboard</a></li>
                 <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
                 <li><a href="#"><i class="fa-solid fa-file-arrow-down"></i>  App Download Status</a></li>

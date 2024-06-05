@@ -17,6 +17,15 @@
 
     <title>State Ranking</title>
     <link rel="stylesheet" href="{% static "css/dashboard.css" %}">
+    <style>
+        header nav ul li:first-child{
+ 
+    background-color: #f2f2f281;
+    height: 10px;
+    border-left: 5px solid white;
+    width: 100%;
+    border-radius: 6px;}
+    </style>
 </head>
 <body>
     <header>
@@ -24,7 +33,7 @@
         <p>Super Admin</p>   
             <nav>
                 <ul>
-                    <li></li>
+                   
                     <li><a href="{% url 'dashboard' %}"><i class='bx bx-home-alt'></i> Dashboard</a></li>
                     <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Analytics</a></li>
                     <li><a href="#"><i class="fa-solid fa-file-arrow-down"></i> App Download Status</a></li>
