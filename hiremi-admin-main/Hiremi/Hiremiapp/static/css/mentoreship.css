@@ -248,68 +248,167 @@ th{
     font-size: 20px;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1300px){
+    /* ---------search-bar----------- */
+
     .search{
-        background-color: #f2f2f2;
-        height: 100%;
-        width: 140%;
-        padding-left: 10%;
-        padding-bottom: 50px;
+        text-align: center;
+        position: relative;
+        padding: 40px;
+        padding-left: 0%;
     }
-    .inp-bg{
-        padding-left: 240px;
-        padding-top: 20px;
-        width: 60%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .sec-inp{
-        width: 100%;
-    }
-    .inp-bg i{
-        font-size: 25px;
-        color: red;
+    .search .sec-inp .inp-bg img{
         position: absolute;
-        left: 60%;
+        top: 45px;
+        right: 20%;
+        width: 80px;
     }
-    .inp-bg img{
-        position: absolute;
-        left: 120%;
-    }
-    .inp-bg input::placeholder{
-        padding-left: 50px;
-        font-size: 25px;
-    }
-    .inp-bg input{
-        border-radius: 20px;
-        box-shadow: 1px 0.5px 5px 0.5px;
-        padding: 10px;
-        height: 40px;
+    .search .sec-inp .inp-bg input{
+        margin-left: 10%;
         width: 600px;
+        height: 40px;
+        padding: 5px;
+        padding-left: 200px;
+        font-size: 22px;
         border: none;
+        border-radius: 20px;
+        box-shadow: 1px 2px 5px 2px lightgray;
         outline: none;
     }
-    .sec-inp img{
-        width: 70px;
+    .search .sec-inp .inp-bg i{
+        font-size: 20px;
+        width: 0%;
+        position: absolute;
+        left: 24%;
+        top: 55px;
+        align-items: center;
+        color: red;
+        padding-left: 50px;
+    }
+    .search{
+        text-align: center;
+        position: relative;
+        padding: 40px;
     }
     .account{
         background-color: #f2f2f2;
-        width: 150%;
-        height: 50%;
+        padding-left: 40%;
+        padding-right: 20px;
+    }
+    .ac-in{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .statement{
+        display: block;
+        width: 100%;
+        column-gap: 60px;
+    }
+}   
+
+@media only screen and (max-width: 900px){
+    /* ---------search-bar----------- */
+
+    .search{
+        text-align: center;
+        position: relative;
+        padding: 40px;
+        padding-left: 30%;
+    }
+    .search .sec-inp .inp-bg img{
+        position: absolute;
+        top: 45px;
+        right: 5%;
+        width: 80px;
+    }
+    .search .sec-inp .inp-bg input{
+        width: 300px;
+        height: 40px;
+        padding: 5px;
+        padding-left: 200px;
+        font-size: 22px;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 1px 2px 5px 2px lightgray;
+        outline: none;
+    }
+    .search .sec-inp .inp-bg i{
+        font-size: 20px;
+        width: 0%;
+        position: absolute;
+        left: 35%;
+        top: 55px;
+        align-items: center;
+        color: red;
+        padding-left: 50px;
+    }
+
+    .statement{
+        display: block;
+        width: 100%;
+        column-gap: 60px;
+    }
+} 
+@media only screen and (max-width: 700px){
+    /* ---------search-bar----------- */
+
+    .search{
+        text-align: center;
+        position: relative;
+        padding: 40px;
+        padding-left: 35%;
+    }
+    .search .sec-inp .inp-bg img{
+        position: absolute;
+        top: 45px;
+        right: -10%;
+        width: 80px;
+    }
+    .search .sec-inp .inp-bg input{
+        width: 300px;
+        height: 40px;
+        padding: 5px;
+        padding-left: 200px;
+        font-size: 22px;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 1px 2px 5px 2px lightgray;
+        outline: none;
+    }
+    .search .sec-inp .inp-bg i{
+        font-size: 20px;
+        width: 0%;
+        position: absolute;
+        left: 35%;
+        top: 55px;
+        align-items: center;
+        color: red;
+        padding-left: 50px;
+    }
+    /* ----------status------------ */
+    .account{
+        background-color: #f2f2f2;
+        padding-left: 350px;
+        padding-right: 20px;
     }
     .account h4{
-        text-align: center;
+        text-align: start;
         color: red;
+    }
+    .ac-in{
+        width: 100%;
+        padding-left: 34%;
     }
     .ac-in h4{
         padding-top: 25px;
         display: grid;
-        width: 70%;
-        font-size: 15px;
+        font-size: 12px;
+        color: red;
         grid-template-columns: repeat(3, 1fr);
-        padding-left: 220px;
         align-items: center;
+        padding-left: 0;
         column-gap: 0px;
     }
     .ac-in{
@@ -320,33 +419,33 @@ th{
     }
     .ac-in h4::before, .ac-in h4::after{
         content: "";
-        height: 2px;
+        height: 1px;
+        width: 100%;
         background-color: #000;
         display: inline;
     }
     .statement{
-        display: flex;
-        justify-content: center;
-        column-gap: 10px;
-        margin-left: 230px;
+        display: block;
+        width: 100%;
+        column-gap: 60px;
     }
     .ac-st{
         background-color: #fff;
         border-radius: 10px;
         position: relative;
         border-left: 5px solid red;
-        width: 200px;
+        width: 400px;
         display: flex;
         align-items: center;
         padding-bottom: 10px;
-        height: 80px;
-        padding-left: 10px;
+        height: 120px;
+        padding-left: 20px;
         margin-top: 50px;
     }
-    .ac-st .icon{
+    .ac-st .icon img{
         background: linear-gradient(30deg, red, rgb(0, 0, 0));
-        width: 35px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
     }
     .ac-st .icon i{
@@ -354,11 +453,10 @@ th{
         color: white;
         display: flex;
         justify-content: center;
-        font-size: 15px;
+        font-size: 25px;
         border-radius: 50%;
     }
     .state{
-        padding-right: 20px;
         padding-left: 20px;
     }
     .state h3, .state p{
@@ -366,90 +464,165 @@ th{
     }
     .state h3{
         padding-top: 20px;
-        font-size: 20px;
+        font-size: 30px;
     }
     .state p1{
         font-weight: 600;
-        font-size: 10px;
+        font-size: 15px;
     }
     .state p{
-        font-size: 12px;
-        padding-top: 5px;
+        padding-top: 20px;
     }
     .sub-st{
         position: absolute;
-        right: 2%;
+        right: 6%;
         text-align: end;
         padding-top: 70px;
     }
     .sub-st p1{
-        font-size: 10px;
         text-align: end;
         color: springgreen;
     }
     .sub-st p{
-        font-size: 10px;
+        font-size: 15px;
         color: lightgray;
     }
-    .list{
-        display: flex;
-        justify-content: center;
+} 
+
+@media only screen and (max-width: 550px){
+    /* ---------search-bar----------- */
+
+    .search{
+        text-align: center;
+        position: relative;
+        padding: 40px;
+        padding-left: 50%;
     }
-    .list h4{
-        font-size: 15px;
-        display: grid;
-        width: 70%;
-        grid-template-columns: repeat(3, 1fr);
-        padding-left: 220px;
+    .search .sec-inp .inp-bg img{
+        position: absolute;
+        top: 45px;
+        right: -40%;
+        width: 80px;
+    }
+    .search .sec-inp .inp-bg input{
+        width: 300px;
+        height: 40px;
+        padding: 5px;
+        padding-left: 200px;
+        font-size: 22px;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 1px 2px 5px 2px lightgray;
+        outline: none;
+    }
+    .search .sec-inp .inp-bg i{
+        font-size: 20px;
+        width: 0%;
+        position: absolute;
+        left: 50%;
+        top: 55px;
         align-items: center;
+        color: red;
+        padding-left: 50px;
+    }
+    /* ----------status------------ */
+    .account{
+        background-color: #f2f2f2;
+        padding-left: 300px;
+        padding-right: 20px;
+    }
+    .account h4{
+        text-align: start;
+        color: red;
+    }
+    .ac-in{
+        width: 100%;
+        padding-left: 45%;
+    }
+    .ac-in h4{
+        padding-top: 25px;
+        display: grid;
+        font-size: 12px;
+        color: red;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        padding-left: 0;
         column-gap: 0px;
     }
-    .list h4::before, .list h4::after{
+    .ac-in{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .ac-in h4::before, .ac-in h4::after{
         content: "";
-        height: 2px;
+        height: 1px;
+        width: 100%;
         background-color: #000;
         display: inline;
     }
-    .list-items{
-        display: flex;
-        justify-content: end;
-    }
-    .list-items ul{
-        display: flex;
-        list-style: none;
-        column-gap: 20px;
-        padding-right: 10px;
-    }
-    .list-items ul li{
-        font-size: 10px;
-        font-weight: 600;
-        color: white;
-        padding: 8px;
-        border-radius: 20px;
-        background: linear-gradient(30deg, red, rgb(0, 0, 0));
-    }
-    .list1 .list-type{
-        margin-left: 30%;
-    }
-    thead,th{
-        font-size: 14px;
-    }
-    table{
+    .statement{
+        display: block;
         width: 100%;
+        column-gap: 60px;
     }
-    table,th,td{
-        padding: 10px;
+    .ac-st{
+        background-color: #fff;
+        border-radius: 10px;
+        position: relative;
+        border-left: 5px solid red;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        height: 120px;
+        padding-left: 20px;
+        margin-top: 50px;
     }
-    table,th,td{
-        border-bottom: 2px solid gray;
-        border-spacing: 0;
+    .ac-st .icon img{
+        background: linear-gradient(30deg, red, rgb(0, 0, 0));
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
     }
-    table, td{
-        font-size: 13px;
-        text-align: center;
-        border-bottom: 2px solid lightgray;
+    .ac-st .icon i{
+        padding: 12px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        border-radius: 50%;
     }
-    table, tbody{
-        text-align: center;
+    .state{
+        padding-left: 20px;
+    }
+    .state h3, .state p{
+        color: red;
+    }
+    .state h3{
+        padding-top: 20px;
+        font-size: 30px;
+    }
+    .state p1{
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .state p{
+        padding-top: 20px;
+    }
+    .sub-st{
+        position: absolute;
+        right: 6%;
+        text-align: end;
+        padding-top: 70px;
+    }
+    .sub-st p1{
+        text-align: end;
+        color: springgreen;
+    }
+    .sub-st p{
+        font-size: 15px;
+        color: lightgray;
     }
 }
